@@ -64,8 +64,8 @@ def setrun(claw_pkg='amrclaw'):
     clawdata.num_dim = num_dim
     
     # Lower and upper edge of computational domain:
-    clawdata.lower[0] = -1.000000e+00          # xlower
-    clawdata.upper[0] = 1.000000e+00          # xupper
+    clawdata.lower[0] = 0.000000e+00          # xlower
+    clawdata.upper[0] = 2.000000e+00          # xupper
     clawdata.lower[1] = -1.000000e+00          # ylower
     clawdata.upper[1] = 1.000000e+00          # yupper
     clawdata.lower[2] = -1.000000e+00          # zlower
@@ -121,8 +121,8 @@ def setrun(claw_pkg='amrclaw'):
     if clawdata.output_style==1:
         # Output ntimes frames at equally spaced times up to tfinal:
         # Can specify num_output_times = 0 for no output
-        clawdata.num_output_times = 6
-        clawdata.tfinal = 0.6
+        clawdata.num_output_times = 10
+        clawdata.tfinal = 1.0
         clawdata.output_t0 = True  # output at initial (or restart) time?
         
     elif clawdata.output_style == 2:
