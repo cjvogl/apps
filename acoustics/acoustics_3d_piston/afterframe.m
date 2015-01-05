@@ -1,12 +1,12 @@
 rybcolormap
-axis([-1 1 -1 1 -1 1])
+axis([0 2 0 1 0 1])
 daspect([1 1 1]);
 
 hideslices;
-showslices('x',1);
+%showslices('x',1);
 %showslices('x',3);
 showslices('y',3);
-showslices('z',3);
+%showslices('z',3);
 
 
 showpatchborders;
@@ -23,7 +23,7 @@ hidecubes(1:2);
 
 %showgridlines(1:2);
 
-cv = linspace(0,1,11);
+cv = linspace(0.2,2,10);
 cv([1 end]) = [];
 drawcontourlines(cv);
 

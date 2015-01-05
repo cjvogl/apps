@@ -36,7 +36,7 @@ ContourValues = [];   % draw contour lines from 'afterframe.m'
 % The next three parameters are vectors of x,y,z coordinates of 2d slices
 % to be displayed for PlotType = 1,2,3.
 
-  xSliceCoords = -1:0.5:1;
+  xSliceCoords = 0:0.5:2;
   ySliceCoords = -1:0.5:1;
   zSliceCoords = -1:0.5:1;
 

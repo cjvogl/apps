@@ -66,15 +66,15 @@ def setrun(claw_pkg='amrclaw'):
     # Lower and upper edge of computational domain:
     clawdata.lower[0] = 0.000000e+00          # xlower
     clawdata.upper[0] = 2.000000e+00          # xupper
-    clawdata.lower[1] = -1.000000e+00          # ylower
-    clawdata.upper[1] = 1.000000e+00          # yupper
-    clawdata.lower[2] = -1.000000e+00          # zlower
-    clawdata.upper[2] = 1.000000e+00          # zupper
+    clawdata.lower[1] = 0.000000e+00          # ylower
+    clawdata.upper[1] = 2.000000e+00          # yupper
+    clawdata.lower[2] = 0.000000e+00          # zlower
+    clawdata.upper[2] = 2.000000e+00          # zupper
     
     # Number of grid cells:
-    clawdata.num_cells[0] = 20     # mx
-    clawdata.num_cells[1] = 20     # my
-    clawdata.num_cells[2] = 20     # mz
+    clawdata.num_cells[0] = 30     # mx
+    clawdata.num_cells[1] = 30     # my
+    clawdata.num_cells[2] = 30     # mz
     
 
     # ---------------
@@ -133,7 +133,7 @@ def setrun(claw_pkg='amrclaw'):
     elif clawdata.output_style == 3:
         # Output every step_interval timesteps over total_steps timesteps:
         clawdata.output_step_interval = 1
-        clawdata.total_steps = 10
+        clawdata.total_steps = 20
         clawdata.output_t0 = True  # output at initial (or restart) time?
         
 
@@ -234,11 +234,11 @@ def setrun(claw_pkg='amrclaw'):
     clawdata.bc_lower[0] = 'user'   # at xlower
     clawdata.bc_upper[0] = 'extrap'   # at xupper
 
-    clawdata.bc_lower[1] = 'extrap'   # at ylower
-    clawdata.bc_upper[1] = 'extrap'   # at yupper
+    clawdata.bc_lower[1] = 'wall'   # at ylower
+    clawdata.bc_upper[1] = 'wall'   # at yupper
                          
-    clawdata.bc_lower[2] = 'extrap'   # at zlower
-    clawdata.bc_upper[2] = 'extrap'   # at zupper
+    clawdata.bc_lower[2] = 'wall'   # at zlower
+    clawdata.bc_upper[2] = 'wall'   # at zupper
 
     
     # --------------
@@ -279,10 +279,10 @@ def setrun(claw_pkg='amrclaw'):
     amrdata.amr_levels_max = 3
 
     # List of refinement ratios at each level (length at least amr_level_max-1)
-    amrdata.refinement_ratios_x = [2, 2]
-    amrdata.refinement_ratios_y = [2, 2]
-    amrdata.refinement_ratios_z = [2, 2]
-    amrdata.refinement_ratios_t = [2, 2]
+    amrdata.refinement_ratios_x = [4, 2]
+    amrdata.refinement_ratios_y = [4, 2]
+    amrdata.refinement_ratios_z = [4, 2]
+    amrdata.refinement_ratios_t = [4, 2]
 
 
     # Specify type of each aux variable in clawdata.auxtype.

@@ -119,7 +119,7 @@ c
 c
   100 continue
 c     # oscillating circular disk piston surrounded by solid baffle
-      s = sin(20.d0 * time)
+      s = sin(40.d0 * time)
       do 105 k = 1,nfil
        z = zbot + (k-0.5d0)*hz
        do 105 j = 1,ncol
