@@ -39,15 +39,13 @@ MODULES = \
   $(AMRLIB)/regions_module.f90 \
   $(AMRLIB)/gauges_module.f90
 
-# Local source for thread tests
 SOURCES = \
-  ./fdisc.f \
-  ./qinit.f \
-  ./setaux.f \
-  ./setprob.f \
-  $(CLAW)/riemann/src/rpn2_euler_5wave.f90 \
-  $(CLAW)/riemann/src/rpt2_euler_5wave.f90 \
+  qinit.f \
+  setprob.f \
+  $(CLAW)/riemann/src/rpn2_advection.f \
+  $(CLAW)/riemann/src/rpt2_advection.f \
   $(AMRLIB)/amr2.f90 \
+  $(AMRLIB)/setaux.f90 \
   $(AMRLIB)/bc2amr.f \
   $(AMRLIB)/b4step2.f90 \
   $(AMRLIB)/qad.f \
@@ -57,9 +55,6 @@ SOURCES = \
   $(AMRLIB)/bound.f90 \
   $(AMRLIB)/stepgrid.f \
   $(AMRLIB)/stepgrid_dimSplit.f \
-  $(AMRLIB)/cellave.f \
-  $(AMRLIB)/fss.f \
-  $(AMRLIB)/zeroin.f \
   $(AMRLIB)/auxcoarsen.f \
   $(AMRLIB)/fixcapaq.f \
   $(AMRLIB)/estdt.f \
